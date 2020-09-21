@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính fibonacci</title>
+</head>
+<body>
+<button onclick="tinhFibonacci()">tinh</button>
+<p id="result"></p>
+<script>
+    function tinhFibonacci() {
+        let str = '0,1,';
+        let a = 0;
+        let b = 1;
+        let result = a + b;
+        let i = 0;
+        let count = 10;
+        while (i < count) {
+            result = a + b;
+            b = result;
+            a = b;
+            str += result + ',';
+            i++;
+        }
+        document.getElementById("result").innerHTML = str;
+    }
+</script>
+</body>
+</html>
